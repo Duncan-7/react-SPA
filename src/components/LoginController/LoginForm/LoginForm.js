@@ -16,7 +16,7 @@ const LoginForm = (props) => {
         <label>Password
           <input type="password" onChange={props.passwordChange} />
         </label>
-        {props.error == "" ? null : error}
+        {props.error === "" ? null : error}
 
         <button onClick={props.click}>Login</button>
       </div>

@@ -15,7 +15,10 @@ class Users extends Component {
   }
 
   componentDidMount() {
+    this.getData()
+  }
 
+  getData() {
     axios.get('https://frozen-cliffs-92291.herokuapp.com/customers', this.state.config)
       .then(response => {
 
@@ -39,7 +42,7 @@ class Users extends Component {
           this.setState({ users: users })
         })
     } else {
-      this.componentDidMount()
+      this.getData()
     }
 
   }

@@ -27,7 +27,6 @@ class LoginController extends Component {
     }
     axios.post('https://frozen-cliffs-92291.herokuapp.com/login', loginDetails)
       .then(response => {
-        console.log(response)
         if (response.status === 200) {
           this.setState({ authToken: response.data.auth_token, loggedIn: true })
         }
