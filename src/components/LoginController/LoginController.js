@@ -38,7 +38,12 @@ class LoginController extends Component {
   }
 
   logoutClickHandler = () => {
-    this.setState({ authToken: "", loggedIn: false })
+    this.setState({
+      authToken: "",
+      loggedIn: false,
+      error: ""
+    })
+
   }
 
   render() {
